@@ -1,0 +1,79 @@
+<div class="backdrop is-hidden" data-second-modal id="reviews__backdrop">
+  <div class="modal reviews__modal" id="reviews__modal">
+    <button
+      type="button"
+      class="modal-close-btn"
+      aria-label="close modal window"
+      data-second-modal-close
+    >
+      <svg class="modal-close-icon">
+        <use href="./svg/sprite.svg#icon-close"></use>
+      </svg>
+    </button>
+    <h2 class="modal__window-title reviews__modal-title">
+      leave a review
+      <span class="span-to-enter">
+        about <span class="section__title-span">our chocolate</span>
+      </span>
+    </h2>
+    <form class="reviews__form" autocomplete="off" id="reviews__form">
+      <div class="reviews__form-field">
+        <input
+          id="reviews__name"
+          class="form-input"
+          name="reviews__name"
+          type="text"
+          placeholder="Name"
+          required
+        />
+      </div>
+      <div class="reviews__form-field">
+        <input
+          id="reviews__email"
+          class="form-input"
+          name="reviews__email"
+          type="email"
+          placeholder="Enter your email"
+          required
+        />
+      </div>
+      <div class="reviews__form-field">
+        <label>
+          <span class="country-code">
+            <input
+              id="reviews__phone"
+              class="form-input user-phone-input"
+              name="reviews__phone"
+              type="tel"
+              maxlength="9"
+              minlength="9"
+              placeholder="Phone number"
+              required
+            />
+            <svg class="icon-flag">
+              <use class="flag" href="./svg/sprite.svg#icon-flag"></use>
+            </svg>
+          </span>
+        </label>
+      </div>
+      <div class="reviews__form-field">
+        <textarea 
+          id="reviews__comment"
+          class="form-textarea review-form-textarea"
+          name="reviews__comment"
+          placeholder="Enter text"
+          required
+        ></textarea>
+      </div>
+
+      <button
+        id="reviews__modal-button"
+        class="modal-button accent-button reviews__form-submit"
+        type="submit"
+
+        >
+        Send
+      </button>
+    </form>
+  </div>
+</div>

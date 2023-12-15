@@ -1,0 +1,69 @@
+.swiper-pagination {
+  display: flex;
+  column-gap: 13px;
+  justify-content: center;
+
+  &-bullet {
+    width: 13px; 
+    height: 13px;
+    color: var(--secondary-text-color);
+    font-size: 8px;
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    &-active {
+      width: 28px;
+      background-color: var(--accent-color);
+      border-radius: 25px;
+    }
+  }
+
+  &-progressbar {
+
+    &.swiper-pagination {
+
+      &-progressbar {
+
+        &-fill {
+          background-color: var(--accent-color);
+        }
+      }
+    }
+  }
+}
+
+.swiper {
+  width: 100%;
+  height: auto;
+
+  .reviews {
+
+    &__swiper {
+
+      &-list {
+        padding-top: 42px;
+      }
+    }
+  }
+}
+
+.swiper-horizontal {
+
+  > .swiper-pagination-bullets,
+  .swiper-pagination-horizontal.swiper-pagination-bullets {
+
+    .swiper-pagination-bullet {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  > .swiper-pagination-bullets, 
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    left: 50%;
+    bottom: 0; 
+    transform: translateX(-50%);
+  }
+}

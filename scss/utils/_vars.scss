@@ -1,0 +1,28 @@
+:root {
+    --primary-text-color: #111111;
+    --secondary-text-color: #ffffff;
+  
+    --accent-color: #fd9222;
+  
+    --primary-bg-color: #fafafa;
+    --secondary-bg-color: #1e1823;
+    --additional-bg-color: #ffffff;
+  
+    --field-text-color: #000000;
+    --field-placeholder-color: rgba(64, 64, 64, 0.3);
+  
+    --general-transition: 250ms linear;
+  }
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }

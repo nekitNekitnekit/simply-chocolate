@@ -1,0 +1,110 @@
+.sellers {
+  
+  &__section {
+
+    &-img {
+      width: 100%;
+    }
+
+    &-list {
+
+      @media screen and (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        gap: 32px; 
+        margin-bottom: 20px;
+      }
+
+      @media screen and (min-width: 768px) and (max-width: 1200px) { 
+        display: flex;
+        flex-wrap: wrap; 
+        flex-direction: row;
+        gap: 16px;
+        margin-bottom: 32px;
+      }
+
+      @media screen and (min-width: 1200px) {
+        display: flex;
+        flex-wrap: wrap; 
+        gap: 16px;
+        margin-bottom: 32px;
+      }
+    }
+
+    &-item {
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+
+      @media screen and (min-width: 768px) and (max-width: 1200px) {
+        width: calc((100% - 16px) / 2);  
+      }
+
+      @media screen and (min-width: 1200px) {
+        width: calc((100% - 32px) / 3);
+      }
+    }
+
+    &-text1 {
+      @media screen and (max-width: 768px) {
+        line-height: 1.29;
+      }
+
+      @media screen and (min-width: 768px) {
+        display: none;  
+      }
+
+      @media screen and (min-width: 1200px) {
+        line-height: 1.29; 
+      }
+    }
+
+    &-text2 {
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+
+      @media screen and (min-width: 768px) and (max-width: 1200px) {
+        max-width: 306px;
+      }
+
+      @media screen and (min-width: 1200px) {
+        max-width: 407px;
+      }
+    }
+
+    &-choc1 {
+      @media screen and (max-width: 768px) {
+        display: flex;
+        flex-direction: column; 
+        gap: 20px;
+      } 
+    }
+
+    &-choc3 {
+      @media screen and (max-width: 1200px) {
+        display: none;
+      }
+      @media screen and (min-width: 1200px) {
+        display: inline;
+      }
+    }
+
+    &-text-button {
+      @media screen and (min-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;  
+      }
+    }
+    
+    &-button {
+      align-self: flex-start;
+      
+      @media screen and (max-width: 768px) {
+        display: flex;
+        margin: 0 auto;
+      }
+    }
+  }
+}

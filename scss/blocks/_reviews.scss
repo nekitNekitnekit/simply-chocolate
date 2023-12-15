@@ -1,0 +1,97 @@
+.reviews {
+
+  &__swiper {
+
+    &-item {
+      border: 1px solid rgba(17, 17, 17, 0.1);
+      box-shadow: 0px 9.04932px 26.5717px rgba(215, 228, 249, 0.25);
+      border-radius: 15px;
+      position: relative;
+      height: 200px;
+      padding-bottom: 26px;
+      cursor: grab;
+    }
+
+    &-photo {
+      border-radius: 50%;
+      position: absolute;
+      top: -42px;
+      left: 50%;
+      margin-bottom: 18px;
+      transform: translate(-50%);
+    }
+
+    &-name {
+      font-weight: 600;
+      margin-top: 56px;
+      margin-bottom: 24px;
+      text-align: center;
+      font-size: 18px;
+      line-height: 1.33;
+    }
+
+    &-direction {
+      text-align: center;
+      line-height: 1.28;
+      letter-spacing: -0.02em;
+      color: rgba(17, 17, 17, 0.7);
+    }
+
+    &-button {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    
+      color: var(--primary-text-color);
+      border: 1px solid var(--accent-color);
+
+      &:hover,
+      &:focus {
+        background-color: var(--accent-color);
+        color: var(--secondary-text-color);
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      &-list {
+        margin-top: 74px;
+        padding-bottom: 33px;
+      }
+    
+      &-item {
+        max-width: 335px;
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+    
+      &-button {
+        margin-top: 32px;
+      }
+    }
+    
+    @media screen and (min-width: 768px) and (max-width: 1200px) {
+      &-item {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+    }
+    
+    @media screen and (min-width: 768px) {
+      &-list {
+        margin-top: 91px;
+        padding-bottom: 44px;
+      }
+    
+      &-button {
+        margin-top: 50px;
+      }
+    }
+    
+    @media screen and (min-width: 1200px) {
+      &-item {
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+    }
+  }
+}

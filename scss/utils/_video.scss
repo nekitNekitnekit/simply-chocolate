@@ -1,0 +1,57 @@
+.plyr {
+
+  --plyr-color-main: var(--accent-color);
+
+  border-radius: 15px;
+  cursor: pointer;
+
+  &:hover .plyr__control--overlaid {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+  }
+
+  &__poster {
+    background-size: cover;
+  }
+
+  &__control {
+
+    &--overlaid {
+      --plyr-control-spacing: 5px;
+      --plyr-video-control-background-hover: rgba(0, 0, 0, 0);  
+      border: 1px solid #fff;
+    }
+  }
+
+  &--paused {
+    
+    &.plyr__control--overlaid {
+      opacity: 0;  
+    }
+    
+    &.plyr--stopped .plyr__controls {
+      opacity: 0;
+    }
+
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 335px;
+    height: 500px;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 768px) {
+    height: 400px;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    width: 614px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 600px;
+  }
+
+}

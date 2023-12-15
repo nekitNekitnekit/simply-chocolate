@@ -1,0 +1,133 @@
+.subscribe {
+
+  &__section {
+    margin-left: auto;
+    margin-right: auto;
+  
+    color: var(--secondary-text-color);
+    background-color: var(--secondary-bg-color);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &-title {
+      max-width: 291px;
+      margin-bottom: 24px;
+    }
+
+    &-text {
+      max-width: 326px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 24px;
+    
+      text-align: center;
+      line-height: 1.29;
+      letter-spacing: -0.02em;
+    }
+  }
+
+  &__modal-button {
+    display: block;
+    min-width: 128px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (max-width: 768px) {
+    &__section {
+      padding-bottom: 63px;
+      padding-top: 62px;
+    }
+  }
+  
+  @media screen and (min-width: 768px) {
+    &__section {
+      padding-top: 72px;
+      padding-bottom: 72px;
+
+      &-text {
+        max-width: 467px;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-device-pixel-ratio: 1.99) and (max-width: 768px),
+  screen and (max-resolution: 191dpi) and (max-width: 768px),
+  screen and (max-resolution: 1.99dppx) and (max-width: 768px) {
+  .subscribe__section {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+      url('/img/subscribe/subscribe-mobile.jpg');
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 768px),
+  screen and (min-resolution: 192dpi) and (max-width: 768px),
+  screen and (min-resolution: 2dppx) and (max-width: 768px) {
+  .subscribe__section {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+      url('/img/subscribe/subscribe-mobile@2x.jpg');
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) and (max-divice-pixel-ratio: 1.99),
+  screen and (min-width: 768px) and (max-width: 1200px) and (max-resolution: 191dpi),
+  screen and (max-resolution: 1.99dppx) and (min-width: 768px) and (max-width: 1200px) {
+  .subscribe__section {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+      url('/img/subscribe/subscribe-tablet.jpg');
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px) and (max-width: 1200px),
+  screen and (min-resolution: 192dpi) and (min-width: 768px) and (max-width: 1200px),
+  screen and (min-resolution: 2dppx) and (min-width: 768px) and (max-width: 1200px) {
+  .subscribe__section {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+      url('/img/subscribe/subscribe-tablet@2x.jpg');
+  }
+}
+
+@media screen and (max-device-pixel-ratio: 1.99) and (min-width: 1200px),
+  screen and (max-resolution: 191dpi) and (min-width: 1200px),
+  screen and (max-resolution: 1.99dppx) and (min-width: 1200px) {
+  .subscribe__section {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+      url('/img/subscribe/subscribe-desktop.jpg');
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+  screen and (min-resolution: 192dpi) and (min-width: 1200px),
+  screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+  .subscribe__section {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+      url('/img/subscribe/subscribe-desktop@2x.jpg');
+  }
+}

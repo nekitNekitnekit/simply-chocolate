@@ -1,0 +1,238 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 1;
+  visibility: visible;
+  overflow: auto;
+  transition: opacity var(--general-transition),
+    visibility var(--general-transition);
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--primary-bg-color);
+  border-radius: 15px;
+
+  &.is-visible {
+    display: block;
+  }
+
+  @media screen and (max-width: 311px) {
+      width: 100%;
+  }
+  
+  @media screen and (min-width: 311px) {
+      width: 311px;
+  }
+
+  &::-webkit-scrollbar {
+    width: 4px;  
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: var(--background-our-product-list);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--accent-color);
+    border-radius: 20px; 
+  }
+
+  &-close {
+
+    &-btn {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: transparent;
+      border: none;
+
+      &:hover,
+      &:focus {
+        .modal-close-icon {
+        stroke: var(--accent-color);
+      }
+    }
+
+      @media screen and (max-width: 768px) {
+        top: 15px;
+        right: 14px;
+      }
+
+      @media screen and (min-width: 768px) {
+        top: 24px;
+        right: 24px;  
+      }
+    }
+
+    &-icon {
+      stroke: var(--primary-text-color);
+      transition: stroke var(--general-transition);
+
+      @media screen and (max-width: 768px) {
+        width: 24px;
+        height: 24px;
+      }
+
+      @media screen and (min-width: 768px) {
+        width: 28px;
+        height: 28px;
+      }
+    }
+  }
+}
+
+.form {
+
+  &-label,
+  &-input, 
+  &-textarea {
+    font-weight: 500;
+    letter-spacing: -0.02em;  
+    color: var(--field-text-color);
+  }
+
+  &-input,
+  &-textarea {
+    width: 100%;
+    background-color: transparent;
+    outline: transparent; 
+    border: 1.5px solid rgba(17, 17, 17, 0.05);
+    transition: border-color var(--general-transition);
+
+    &:focus {
+      border-color: var(--accent-color);  
+    }
+
+    &::placeholder {
+      color: var(--field-placeholder-color); 
+    }
+
+    @media screen and (max-width: 768px) {
+          padding-left: 18px;
+          padding-right: 18px;
+          font-size: 14px;  
+          line-height: 1.21;
+          border-radius: 8px;   
+      }
+
+      @media screen and (min-width: 768px) {
+            padding-left: 24px;
+            padding-right: 24px;
+            font-size: 18px;
+            line-height: 1.22;
+            border-radius: 13px;   
+      }
+  }
+
+  &-label {
+    display: block; 
+    margin-bottom: 8px;
+
+    @media screen and (max-width: 768px) {
+      font-size: 12px;
+      line-height: 1.17;
+    }
+
+    @media screen and (min-width: 768px) {
+      line-height: 1.29; 
+    }
+  }
+
+  &-input {
+    @media screen and (max-width: 768px) {
+      height: 45px;
+    }
+  
+    @media screen and (min-width: 768px) {
+      height: 66px;
+    }
+  }
+
+  &-textarea {
+    resize: none; 
+
+    @media screen and (max-width: 768px) {
+          height: 91px;    
+          padding-top: 14px;
+    }
+
+    @media screen and (min-width: 768px) {
+          height: 137px;  
+          padding-top: 22px;
+    }
+  }  
+}
+
+.country-code {
+  position: relative;
+  display: flex;
+
+  &::before {
+    display: block;
+    content: '+380';
+    position: absolute;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+
+    @media screen and (max-width: 768px) {
+      left: 50px;    
+      top: 14.5px;
+    }
+
+    @media screen and (min-width: 768px) {
+      font-size: 18px;
+      left: 74px;
+      top: 24px;
+    }
+  }
+
+  &::after {
+    display: block;
+    content: '';
+    background-color: var(--field-placeholder-color);
+    position: absolute;
+
+    @media screen and (max-width: 768px) {
+      left: 92px;
+      top: 10px;    
+      height: 25px;
+      width: 1.5px;
+    }
+
+    @media screen and (min-width: 768px) {  
+      left: 149px;
+      top: 18px;
+      height: 32px;
+      width: 2.5px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .personal-info-input {
+    display: flex;
+    gap: 21px; 
+  }
+}
+
+input,
+textarea,
+[contenteditable] {
+  caret-color: var(--accent-color);
+}

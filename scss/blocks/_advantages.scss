@@ -1,0 +1,112 @@
+.advantages {
+
+  &__section {
+    background-color: var(--secondary-bg-color);
+
+    &-list {
+      display: flex;
+    }
+
+    &-text {
+      max-width: 308px;
+      line-height: 1.21;
+      letter-spacing: -0.02em;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    &-title {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 1.22;
+      color: var(--secondary-text-color);
+      margin-bottom: 18px;
+    }
+
+    &-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      margin-bottom: 22px;
+      height: 62px;
+      width: 62px;
+    }
+
+    @media screen and (max-width: 768px) {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    
+        &-list {
+          flex-direction: column;
+          gap: 20px;
+        }
+      
+        &-item {
+          width: 100%;
+        }
+      }
+    
+    @media screen and (max-width: 1200px) {
+
+        &-item {
+          padding-right: 28px;
+        }
+      }
+    
+    @media screen and (min-width: 768px) and (max-width: 1200px) {
+
+        &-list {
+          flex-wrap: wrap;
+          gap: 32px;
+        }
+
+        &-item {
+          flex-basis: calc((100% - 32px) / 2);
+          min-height: 244px;
+        }
+      }
+    
+    @media screen and (min-width: 768px) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+    
+    @media screen and (min-width: 1200px) {
+        &-list {
+          gap: 70px;
+          flex-wrap: nowrap;
+          padding-left: 18px;
+          padding-right: 18px;
+        }
+    
+        &-item {
+          flex-basis: calc((100% - 140px) / 3);
+          position: relative;
+
+          &:not(:last-child) {
+            padding-right: 18px;
+          }
+        
+          &:not(:last-child)::before {
+            content: '';
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            right: 0;
+            top: 60px;
+            position: absolute;
+            height: 124px;
+          }
+        }
+    }
+  }
+
+  &-icon {
+    fill: var(--accent-color);
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.container .advantages {
+  display: flex;
+}
